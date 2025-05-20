@@ -2,6 +2,7 @@
 import React from 'react';
 import { FormField, DynamicFieldProps } from '../../../../models/Common/DynamicForm';
 import { getValidation } from '../../../../utils/Common/DynamicForm/validate';
+import  Error  from '../../Error';
 
 
 
@@ -12,7 +13,7 @@ const DynamicField: React.FC<DynamicFieldProps> = ({ field, index, register, err
 
   const renderError = () =>
     errors[field.label] && (
-      <p className="error">{errors[field.label]?.message as string}</p>
+      <Error message = {errors[field.label]?.message as string} />
     );
 
   switch (field.type) {
@@ -23,17 +24,15 @@ const DynamicField: React.FC<DynamicFieldProps> = ({ field, index, register, err
           <label>{field.label}</label>
           <input
             type={field.type === 'input' ? 'text' : 'number'}
-            {...register(field.label, registerOptions)}
-            aria-invalid={!!errors[field.label]}
-          />
-          {renderError()}
+            {...register(field.label, registerOptions)}          />
+            {renderError()}
         </div>
       );
     case 'textarea':
       return (
         <div className="form-group" key={field.label}>
           <label>{field.label}</label>
-          <textarea {...register(field.label, registerOptions)} aria-invalid={!!errors[field.label]} />
+          <textarea {...register(field.label, registerOptions)}  />
           {renderError()}
         </div>
       );
@@ -41,7 +40,7 @@ const DynamicField: React.FC<DynamicFieldProps> = ({ field, index, register, err
       return (
         <div className="form-group" key={field.label}>
           <label>{field.label}</label>
-          <select {...register(field.label, registerOptions)} aria-invalid={!!errors[field.label]}>
+          <select {...register(field.label, registerOptions)} >
             <option value="">Select an option</option>
             {field.options?.map((opt, i) => (
               <option key={i} value={opt.value}>

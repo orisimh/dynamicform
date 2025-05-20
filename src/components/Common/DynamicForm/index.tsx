@@ -5,6 +5,7 @@ import  DynamicField  from './DynamicField';
 import { SCHEMA_URL } from '../../../config/api';
 import '../../../styles/Common/DynamicForm/main.scss';
 import  Modal  from '../Modal';
+import  Error  from '../Error';
 
 
 
@@ -58,7 +59,7 @@ const {
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="form-container">
 
-        {error && <p className="error">{error}</p>}
+        {error && <Error message={error} /> }
         {loading ? <p>Loading...</p> : schema.map((group, i) => (
           <div className="form-section" key={i}>
             <h3>{group.title}</h3>
