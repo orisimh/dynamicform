@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FormField, DynamicFieldProps } from '../../../../models/Common/DynamicForm';
+import { FormField, DynamicFieldProps } from '../../../../types/Common/DynamicForm';
 import { getValidation } from '../../../../utils/Common/DynamicForm/validate';
 import  Error  from '../../Error';
 

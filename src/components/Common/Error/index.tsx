@@ -1,5 +1,5 @@
     import React from 'react';
-    import { ErrorProps } from '../../../models/Common/Error';
+    import { ErrorProps } from '../../../types/Common/Error';
     import '../../../styles/Common/Error/main.scss';
 
 

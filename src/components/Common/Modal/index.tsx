@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../styles/Common/Modal/main.scss';
-import { ModalProps } from '../../../models/Common/Modal';
+import { ModalProps } from '../../../types/Common/Modal';
 
 
 

@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { FieldGroup, FormField, FormData } from '../../../models/Common/DynamicForm';
+import { FieldGroup, FormField, FormData } from '../../../types/Common/DynamicForm';
 import  DynamicField  from './DynamicField';
 import { SCHEMA_URL } from '../../../config/api';
 import '../../../styles/Common/DynamicForm/main.scss';
 import  Modal  from '../Modal';
 import  Error  from '../Error';
-
-
 
 
 const DynamicForm: React.FC = () => {

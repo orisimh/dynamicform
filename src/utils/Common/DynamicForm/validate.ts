@@ -1,5 +1,5 @@
   
-import { FormField } from '../../../models/Common/DynamicForm';
+import { FormField } from '../../../types/Common/DynamicForm';
 import { parseMessage } from './parse';
 
 
