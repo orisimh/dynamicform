@@ -24,8 +24,16 @@ A responsive, dynamic form renderer built with **React**, **TypeScript**, and **
 
 ## 🚀 Getting Started
 
-### Clone the repo
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/orisimh/dynamicform.git
 cd dynamicform
+
+### 2. Install dependencies
+
+npm install
+
+### 3. Start the dev server
+
+npm start
