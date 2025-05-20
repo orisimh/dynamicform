@@ -62,7 +62,14 @@ const {
         {loading ? <p>Loading...</p> : schema.map((group, i) => (
           <div className="form-section" key={i}>
             <h3>{group.title}</h3>
-            {group.fields.map((field: FormField, index: number) => <DynamicField key={`${group.title}-${index}`} field={field} index={index} register={register} errors={errors}/> )} 
+            {group.fields.map((field: FormField, index: number) => 
+              <DynamicField 
+                  key={`${group.title}-${index}`} 
+                  field={field} 
+                  index={index} 
+                  register={register} errors={errors}
+              /> 
+            )} 
           </div>
         ))}
         <button type="submit" disabled={!isValid}>
